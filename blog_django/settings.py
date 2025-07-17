@@ -88,7 +88,7 @@ DATABASES = {
         'NAME': 'blog_django',
         'USER': 'adminblog',
         'PASSWORD': 'admin123',
-        'HOST': 'db',  # Este es el nombre del servicio pra BD en docker-compose
+        'HOST': 'localhost',  # Este es el nombre del servicio pra BD en docker-compose
         'PORT': '5432',
     }
 }
