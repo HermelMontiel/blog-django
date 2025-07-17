@@ -1,0 +1,22 @@
+<h1>{{post.titulo}}</h1>
+<p><em> por {{post.autor}} el {{post.fecha_publicacion}} </em></p>
+<p>{{post.contenido}}</p>
+
+
+<h2>Comentarios</h2>
+{% for comentario in comentarios %}
+    <div>
+        <strong>{{comentario.autor}}</strong> dijo: <br>
+        {{comentario.texto}} <br>
+        <em>{{comentario.fecha}}</em>
+    </div>
+{%empty%}
+    <p>No hay comentarios para esta publicacion aún</p>
+{% endfor %}
+
+<h3> Agregar un comentario </h3>
+<form method='post'>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit"> Enviar </button> 
+</form>
