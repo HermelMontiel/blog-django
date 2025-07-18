@@ -1,8 +1,8 @@
 <h2>REGISTRO DE USUARIO</h2>
-<form method = 'post'>
+<form method='post'>
     {% csrf_token %}
-    <input type="text" name = "username" placeholder="Usuario" required>
-    <input type="password" name = "password" placeholder="Contraseña" required>
-    <button type="submit"> REGISTRARSE</button>
+    <input type="text" name="username" placeholder="Usuario" required>
+    <input type="password" name="password" placeholder="Contrasena" required>
+    <button type="submit">REGISTRARSE</button>
 </form>
-<a href="{% url 'login' %}"> ¿Ya tienes una cuenta? Iniciar sesión</a>
+<a href="{% url 'login'%}"> ?Ya tienes una cuenta? Iniciar sesión</a>
